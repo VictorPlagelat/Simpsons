@@ -12,6 +12,7 @@ figure{
 }
 img{
     width: 100%;
+    vertical-align: top;
 }
 .container{
     background-color:#ffffff;
@@ -21,13 +22,13 @@ img{
 .flex{
     display: flex;
 }
+
 /* ============================================= */
                     /* HEADER */
 /* ================================================= */
+
 header{
-    background-color: #0097F6;
-    
-    
+    background-color: #0097F6; 
 }
 header h2{
     margin: 0;
@@ -66,16 +67,146 @@ header nav a:hover {
 }
 
 /* ======================================= */
-/* =============        Main      ========================= */
-/* ================================= */
+/* ================ Main ================= */
+/* ======================================= */
 
 main{
     border-top: hsla(0, 0%, 0%, 0.376) 2px dashed ;
     padding: 30px;
+    position: relative;
 }
+
+main article{
+    width: 70%;
+    margin-right: 30px;
+}
+
+
 main h2{
     color: #F8D729;
+    font-size: 35px;
 }
 main p{
     text-align: justify;
+    font-size: 25px;
+}
+
+
+main article figure{
+   border: 1px solid black; 
+   margin: 5px;
+   width: 350px;
+   height: 370px;
+   overflow: hidden;
+}
+
+main aside{
+    width: 25%;
+    background-color: #0097F6;
+    color: white;
+    flex-direction: column;
+    height: 740px;
+    position: absolute;
+    right: 40px;
+    bottom: 25px;
+    padding-top: 1rem;
+}
+main aside figure {
+    width: 300px ;
+    margin: auto;
+    
+    border: white 1px solid;
+}
+main aside figcaption{
+    text-align: center;
+}
+main aside figcaption h3{
+    margin: 0;
+    font-size: 25px;
+}
+main aside figcaption h5{
+    font-size: 15px;
+    margin: 1rem;
+}
+main aside p{
+    font-size: 20px;
+    padding: 0 1rem;
+}
+
+
+/* ================================= */
+/* ============ FOOTER ============= */
+/* ================================= */
+
+footer{
+    background-color: hsl(244, 78%, 34%);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+
+
+
+
+/* =========================================================== */
+            /* TABLETTE */
+/* =========================================================== */
+
+@media screen and (max-width: 1281px) {
+
+
+    .container{
+        width: 98%;
+    }
+
+    main{
+        flex-direction: column;
+        position: static;
+    }
+    main article{
+        width: 100%;
+    }
+    main article .mosaique{
+        width: 90%;
+        margin: auto;
+    }
+    main article figure {
+        width: 100%;
+        height: auto;
+    }
+    main aside{
+        position: static;
+        width: 90%;
+        height: 500px;
+        margin: auto;
+        flex-direction: row;
+        align-items: center;
+    }
+    main aside figure{
+        margin: 1rem 2rem;
+    }
+    main aside p{
+        padding: 0 8rem;
+    }
+}
+/* =========================================================== */
+               /* TELEPHONE */
+/* =========================================================== */
+
+
+@media screen and (max-width: 768px) {
+
+    .container{
+        width: 100%;
+        }
+
+    header figure {
+        height: auto;
+    }
+
+    main aside {
+        flex-direction: column;
+        height: auto;
+    }
 }
